@@ -25,18 +25,24 @@ body{
 }
 
 #entryHolder{
-
+    background-color: red;
 }
 
 #date{
+    color: #f0d43a;
+    background: black;
 
 }
 
 #temp{
+    color: #f0d43a;
+    background: black;
 
 }
 
 #content{
+    color: #f0d43a;
+    background: black;
 
 }
 
