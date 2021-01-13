@@ -1,96 +1,87 @@
 body{
     background: #fffff8;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    background-image: url('assets/roberto-nickson-5PQn41LFsQk-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
 }
 
-#app{
-    display: grid;
-    grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
-    height:100vh;
-    background: #f23557;
-    color: #f0d43a;
-    justify-content: center;
-    grid-gap: 1em;
+h1{
+    font-size: 50px;
+}
+
+label {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+button{
+    width: 100px;
+    height: 50px;
+    font-size: 26px;
+    font-family: 'Oswald', sans-serif;
+    box-shadow: 2px 4px 5px #444;
+    margin-top: 20px;
+}
+
+textarea{
+    display: flex;
+    background-color: rgba(255,255,255,0.5)
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
 }
 
-.holder{
-
+#app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0.3),rgba(0,0,0,0.5));
 }
 
+#zip{
+    background-color: rgba(255,255,255,0.5);
+    margin-bottom: 20px;
+}
+
+#date{
+    font-size:30px;
+    font-weight:300;
+    color:#fffff8;
+}
+
+#temp{
+    font-size:30px;
+    font-weight:300;
+    color:#fffff8;
+}
+
+#content{
+    font-size:30px;
+    font-weight:300;
+    color:#fffff8;
+}
+
+#feelings{
+    background-color: rgba(255,255,255,0.5);
+    margin-bottom: 10px;
+}
 .entry{
     background: rgba(59, 74, 107, .4);
 }
 
-#entryHolder{
-    background-color: red;
-}
-
-#date{
-    color: #f0d43a;
-    background: black;
-
-}
-
-#temp{
-    color: #f0d43a;
-    background: black;
-
-}
-
-#content{
-    color: #f0d43a;
-    background: black;
-
-}
-
-.headline {
-
-}
 .title{
-
+    font-size:30px;
+    font-weight:300;
+    color:#fffff8;
 }
 
-/*  Basic Styling To Override Default For Basic HTML Elements */
-label{
-    display:block;
-    font-size: 27px;
-}
 
-input{
-    display:block;
-    height: 60px;
-    width: 320px;
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
-}
-
-button{
-    width: 400px;
-    height: 100px;
-    background: #3b4a6b;
-    color: #f0d43a;
-    font-size: 26px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
-    box-shadow: 2px 4px 5px #444;
-}
-h1{
-    font-size: 36px;
-}
-
-textarea{
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-}
-/* Reset style for HTML element on active to have no border*/
 input:focus,
 select:focus,
 textarea:focus,
@@ -99,19 +90,16 @@ button:focus {
 }
 /* Style for Placeholder Text*/
 ::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #f0d43a; 
     font-family: 'Oswald', sans-serif;
 
 } 
   
 :-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-    color: #f0d43a; 
     font-family: 'Oswald', sans-serif;
 
 } 
   
 ::-ms-input-placeholder { /* Microsoft Edge */ 
-    color: #f0d43a; 
     font-family: 'Oswald', sans-serif;
 
 } 

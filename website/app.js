@@ -11,6 +11,11 @@ document.getElementById('generate').addEventListener('click',performAction);
 function performAction(){
     zipCode = document.getElementById('zip').value;
     feelings = document.getElementById('feelings').value;
+    console.log(feelings)
+    if (zipCode === ''){
+        alert('please enter a zip code')
+    }
+    else{
     getWeather(baseUrl,zipCode,apiKey)
     .then(function(weather){
         postData('/addData',{temp : weather.main.temp,
@@ -19,6 +24,8 @@ function performAction(){
         }).then(
             updateUI
         )
+    }
+    
 }
 
 
@@ -60,9 +67,9 @@ const updateUI = async () => {
     try{
         const allData = await elemntUpdate.json()
         console.log('updating')
-        document.getElementById('date').innerHTML = `<p><p>Current time ${allData.date}</p>`
-        document.getElementById('temp').innerHTML = `<p>Temperature is ${allData.temp}</p>`
-        document.getElementById('content').innerHTML = `<p>Temperature is ${allData.feelings}</p>`
+        document.getElementById('date').innerHTML = `<p>Current time ${allData[0].date}</p>`
+        document.getElementById('temp').innerHTML = `<p>Temperature is ${allData[0].temp} &#8451</p>`
+        document.getElementById('content').innerHTML = feelings
     }catch(error){
         console.log("error",error)
     }
